@@ -17,7 +17,7 @@
 ## Trying Some Commands
 ![Image](commands.JPG)
 - ls: lists all computer , cd ~, ls, -lat, cat /home/linux/ieng6/cs15lfa22/public/hello.txt, ls -a
-![Image](commands1.JPG)
+![Image](pictures\commands.JPG)
 - Ctrl d, ls, cd ~
 ---
 
