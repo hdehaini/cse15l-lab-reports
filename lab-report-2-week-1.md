@@ -59,9 +59,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
   - `-lat`
   - `cat /home/linux/ieng6/cs15lfa22/public/hello.txt`
   - `ls -a`
-
 2. Logout by either pressing Ctrl-D, or running the command `exit` in the terminal
-
 3. Run a few of the commands from step 1. Notice how the same commands are different. This is because you are looking at the files of your home computer, rather than the remote computer in step 1:
 
 ![Image](pictures\commands1.JPG)
@@ -76,7 +74,6 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ## Moving Files with SCP
 
 1. To copy and paste files between computers using SCP, we will use a test file for this task. Add a file to your computer titled `WhereAmI.java` with this code:
-
 ```
 class WhereAmI {
   public static void main(String[] args) {
@@ -87,7 +84,6 @@ class WhereAmI {
   }
 }
 ```
-
 2. Run these two commands in the terminal
 - This will make a class of WhereAmI.java, then run it. It should then output your OS, user, home, and directory name
 ```
@@ -101,9 +97,9 @@ scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:~/
 - This image displays the steps from 2 - 3
 
 ![Image](pictures\scp.JPG)
-1. Log back in with the ssh command again
-2. Enter ls to the terminal to see all files in the current directory
-3. Type in these two commands for the same opperation once again. Notice OS, user, home, and directory name is different since it is a different computer altogether
+4. Log back in with the ssh command again
+5. Enter ls to the terminal to see all files in the current directory
+6. Type in these two commands for the same opperation once again. Notice OS, user, home, and directory name is different since it is a different computer altogether
 ```
 javac WhereAmI.java
 java WhereAmI
