@@ -54,6 +54,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ---
 
 ## Trying Some Commands
+
 1. To test out the remote computer, you can try some commands
 ![Image](pictures\commands.JPG)
 - This image test these commands in order:
@@ -124,12 +125,54 @@ java WhereAmI
 ---
 
 ## Setting an SSH Key
+
+1. To eliminate the need to continuously put in your password to swich computers and to copy files, we will use SSH keys
+2. Enter `ssh-keygen` to the terminal, and press enter not add any passphrase. You will know it finished when there is a randomart image at the end
+- This make a public and private key that saves to your client machine
+
 ![Image](pictures\settingssh.JPG)
+
+3. Now, we need to copy the public key to the .ssh directory on the server
+4. Enter this line with your information:
+
+```
+ssh cs15lfa22zz@ieng6.ucsd.edu
+```
+
+5. On the server computer, enter this line, then logout:
+
+```
+mkdir .ssh
+```
+
+6. Back on your your client computer, enter this line with your information
+
+```
+scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
+
 ![Image](pictures\settingssh2.JPG)
 
 ---
 
 ## Optimizing Remote Running
+
+- Now you can run SSH and SCP commands without having to put in your password
+- Some more efficient trick you can use are directly putting a command in quotes for the remote server on your client computer without having to sign out. For Example:
+
+```
+ssh cs15lfa22@ieng6.ucsd.edu "ls"
+```
+
+- You can also use semicolons to run multiple commands at once:
+
+```
+cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
+```
+- The image shows a few these and a few other commands you can try out!
+
 ![Image](pictures\quicktricks.JPG)
 
 ---
+
+## Congrats! You're now an expert in SSH and SCP :joy:
