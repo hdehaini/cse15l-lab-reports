@@ -59,7 +59,9 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
   - `-lat`
   - `cat /home/linux/ieng6/cs15lfa22/public/hello.txt`
   - `ls -a`
+
 2. Logout by either pressing Ctrl-D, or running the command `exit` in the terminal
+
 3. Run a few of the commands from step 1. Notice how the same commands are different. This is because you are looking at the files of your home computer, rather than the remote computer in step 1:
 
 ![Image](pictures\commands1.JPG)
