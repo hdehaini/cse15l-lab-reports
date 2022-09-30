@@ -50,6 +50,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 6. It will then output and prompt of security warnings as you are now controlling the remote computer
 
 ![Image](pictures\remote.JPG)
+
 - Shows automatic output from the admins when "SSHing" and displays the status of the remote computers
 
 ---
@@ -57,7 +58,9 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ## Trying Some Commands
 
 1. To test out the remote computer, you can try some commands
+
 ![Image](pictures\commands.JPG)
+
 - This image test these commands in order:
 
   - `ls`
@@ -71,6 +74,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 3. Run a few of the commands from step 1. Notice how the same commands are different. This is because you are looking at the files of your home computer, rather than the remote computer in step 1:
 
 ![Image](pictures\commands1.JPG)
+
 - This image test these commands in order:
 
   - `ls`
