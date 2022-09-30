@@ -4,18 +4,18 @@
 ---
 
 ## Installing VScode
-![Image](installingvscode15l.JPG)
+![Image](pictures\installingvscode15l.JPG)
 
 ---
 
 ## Remotely Connecting
-![Image](rmtlyconnect15l.JPG)
+![Image](pictures\rmtlyconnect15l.JPG)
 - Shows automatic output from the admins when connecting SSHing and displays the status of the remote computers
 
 ---
 
 ## Trying Some Commands
-![Image](commands.JPG)
+![Image](pictures\commands.JPG)
 - ls: lists all computer , cd ~, ls, -lat, cat /home/linux/ieng6/cs15lfa22/public/hello.txt, ls -a
 ![Image](pictures\commands.JPG)
 - Ctrl d, ls, cd ~
@@ -23,19 +23,19 @@
 
 ## Moving Files with scp
 scp
-![Image](scp.JPG)
+![Image](pictures\scp.JPG)
 ssh
-![Image](ssh.JPG)
+![Image](pictures\ssh.JPG)
 
 ---
 
 ## Setting an SSH Key
-![Image](settingssh.JPG)
-![Image](settingssh2.JPG)
+![Image](pictures\settingssh.JPG)
+![Image](pictures\settingssh2.JPG)
 
 ---
 
 ## Optimizing Remote Running
-![Image](quicktricks.JPG)
+![Image](pictures\quicktricks.JPG)
 
 ---
