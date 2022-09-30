@@ -34,6 +34,7 @@ Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 ```
 ssh cs15lfa22zz@ieng6.ucsd.edu
 ```
+
 - replace `cs15lfa22zz` with your username from your course
 
 4. Select yes to the following prompt:
@@ -74,6 +75,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
   - `ls`
   - `cd ~`
+
 ---
 
 ## Moving Files with SCP
@@ -169,6 +171,7 @@ ssh cs15lfa22@ieng6.ucsd.edu "ls"
 ```
 cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
 ```
+
 - The image shows a few these and a few other commands you can try out!
 
 ![Image](pictures\quicktricks.JPG)
