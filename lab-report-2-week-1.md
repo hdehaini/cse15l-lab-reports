@@ -182,4 +182,4 @@ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
 
 ---
 
-# Congrats! You're now an expert in SSH and SCP
+# Congrats! You're now an expert in SSH and SCP :)
