@@ -17,11 +17,9 @@
 
 1. You will need to install the SSH client if you don't already have it
 - For Windows users, to double check that you have the SSH client installed, you can open powershell on your machine and enter:
-
 ```
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 ```
-
 - If you have it installed, you will get an output of:
 
 ![Image](pictures\psoutput.JPG)
@@ -30,23 +28,17 @@ Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 - Typing Ctrl or Command `
 - Or select Terminal -> New Terminal on the top of your VSCode menu bar
 3. Enter the SSH command in the VSCode terminal:
-
 ```
 ssh cs15lfa22zz@ieng6.ucsd.edu
 ```
-
 - replace `cs15lfa22zz` with your username from your course
-
 4. Select yes to the following prompt:
-
 ```
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
-
 5. Type in your password. WARNING: There is no visual output when you are typing your password. Continue to type and enter your password and it is still being inputed, even if you can't see it.
-
 6. It will then output and prompt of security warnings as you are now controlling the remote computer
 
 ![Image](pictures\remote.JPG)
@@ -60,7 +52,6 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 1. To test out the remote computer, you can try some commands
 
 ![Image](pictures\commands.JPG)
-
 - This image test these commands in order:
 
   - `ls`
@@ -99,31 +90,24 @@ class WhereAmI {
 
 2. Run these two commands in the terminal
 - This will make a class of WhereAmI.java, then run it. It should then output your OS, user, home, and directory name
-
 ```
 javac WhereAmI.java
 java WhereAmI
 ```
-
 3. Run this command to copy and paste the files from the client machine to the remote machine (Swich out 'cs15lfa22zz' woth your username and retype your password)
-
 ```
 scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:~/
 ```
-
 - This image displays the steps from 2 - 3
 
 ![Image](pictures\scp.JPG)
-
 1. Log back in with the ssh command again
 2. Enter ls to the terminal to see all files in the current directory
 3. Type in these two commands for the same opperation once again. Notice OS, user, home, and directory name is different since it is a different computer altogether
-
 ```
 javac WhereAmI.java
 java WhereAmI
 ```
-
 - This image displays the steps from 2 - 3
 
 ![Image](pictures\ssh.JPG)
@@ -137,26 +121,19 @@ java WhereAmI
 - This make a public and private key that saves to your client machine
 
 ![Image](pictures\settingssh.JPG)
-
 3. Now, we need to copy the public key to the .ssh directory on the server
 4. Enter this line with your information:
-
 ```
 ssh cs15lfa22zz@ieng6.ucsd.edu
 ```
-
 5. On the server computer, enter this line, then logout:
-
 ```
 mkdir .ssh
 ```
-
 6. Back on your your client computer, enter this line with your information
-
 ```
 scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
-
 ![Image](pictures\settingssh2.JPG)
 
 ---
