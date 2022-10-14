@@ -61,7 +61,7 @@ class SearchEngine {
 
 ![Image](pictures\labReport2\incrementedpic.PNG)
 
-![Image](pictures\labReport2\runnumberserverssh.PNG)
+
 
 ## Part 2
 
@@ -78,6 +78,7 @@ When the length of the array is greater than 1.
 ```
 
 Symptom:
+![Image](pictures\labReport2\reverseSymptom15l.JPG)
 The second half of the array would be symmetrical to the first half, rather than being the reversed of the original array.
 
 
