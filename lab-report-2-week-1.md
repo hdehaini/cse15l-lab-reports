@@ -9,7 +9,7 @@
 2. Follow the instructions in the website to download and install the application based on your OS System (Windows or MAC OS)
 3. After you are done installing VSCode, open the program, and you should come to a get started page similar to this:
 
-![Image](pictures\installingvscode15l.JPG)
+![Image](pictures\labReport1\installingvscode15l.JPG)
 
 ---
 
@@ -22,7 +22,7 @@ Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 ```
 - If you have it installed, you will get an output of:
 
-![Image](pictures\psoutput.JPG)
+![Image](pictures\labReport1\psoutput.JPG)
 
 2. To connect to the remote computer, you will need to open the VSCode terminal
 - Typing Ctrl or Command `
@@ -41,7 +41,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 5. Type in your password. WARNING: There is no visual output when you are typing your password. Continue to type and enter your password and it is still being inputed, even if you can't see it.
 6. It will then output and prompt of security warnings as you are now controlling the remote computer
 
-![Image](pictures\remote.JPG)
+![Image](pictures\labReport1\remote.JPG)
 
 - Shows automatic output from the admins when "SSHing" and displays the status of the remote computers
 
@@ -51,7 +51,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 - To test out the remote computer, you can try some commands
 
-![Image](pictures\commands.JPG)
+![Image](pictures\labReport1\commands.JPG)
 - This image test these commands in order:
   - `ls`
   - `cd ~`
@@ -62,7 +62,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 1. Logout by either pressing Ctrl-D, or running the command `exit` in the terminal
 2. Run a few of the commands from step 1. Notice how the same commands are different. This is because you are looking at the files of your home computer, rather than the remote computer in step 1:
 
-![Image](pictures\commands1.JPG)
+![Image](pictures\labReport1\commands1.JPG)
 
 - This image test these commands in order:
   - `ls`
@@ -95,7 +95,7 @@ scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu:~/
 ```
 - This image displays the steps from 2 - 3
 
-![Image](pictures\scp.JPG)
+![Image](pictures\labReport1\scp.JPG)
 4. Log back in with the ssh command again
 5. Enter ls to the terminal to see all files in the current directory
 6. Type in these two commands for the same opperation once again. Notice OS, user, home, and directory name is different since it is a different computer altogether
@@ -105,7 +105,7 @@ java WhereAmI
 ```
 - This image displays the steps from 2 - 3
 
-![Image](pictures\ssh.JPG)
+![Image](pictures\labReport1\ssh.JPG)
 
 ---
 
@@ -115,7 +115,7 @@ java WhereAmI
 2. Enter `ssh-keygen` to the terminal, and press enter not add any passphrase. You will know it finished when there is a randomart image at the end
 - This make a public and private key that saves to your client machine
 
-![Image](pictures\settingssh.JPG)
+![Image](pictures\labReport1\settingssh.JPG)
 3. Now, we need to copy the public key to the .ssh directory on the server
 4. Enter this line with your information:
 ```
@@ -129,7 +129,7 @@ mkdir .ssh
 ```
 scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
-![Image](pictures\settingssh2.JPG)
+![Image](pictures\labReport1\settingssh2.JPG)
 
 ---
 
@@ -150,7 +150,7 @@ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
 
 - The image shows a few these and a few other commands you can try out!
 
-![Image](pictures\quicktricks.JPG)
+![Image](pictures\labReport1\quicktricks.JPG)
 
 ---
 
