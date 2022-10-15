@@ -57,11 +57,11 @@ class SearchEngine {
 
 The code above creates a web-page that stores and prints out a list when commanded.
 
-1. This is the first page that opens before any queries are called in the URL:
+This is the first page that opens before any queries are called in the URL:
 
 ![Image](pictures\labReport2\starttlist.JPG)
 
-2. These images showcase when I added items to the list.
+These images showcase when I added items to the list.
 - The code above looks for specific path, in this case I set it to "/add". Once it finds that path using the getPath method, if follows through the if statment.
 - I then defined an empty string array named "parameters", while also using the getQuery method to set the split to "=". This is what splits one element from the next in the URL for the array. i define another if statment so that once I do a query with "?", it will look for the string "s". This will be parameters[0].
 - Once it finds "s", it will add parameters[1] to list. It finds parameters[1] after I do a spit in the URL with the "=".
@@ -73,7 +73,7 @@ The code above creates a web-page that stores and prints out a list when command
 ![Image](pictures\labReport2\orangeasded.JPG)
 ![Image](pictures\labReport2\straawwberyueaded.JPG)
 
-3. Finally, I do a simple querry using the same logic as the addition part of the program to print out the list so far. in this case, it is pinapple, apple, lemon, orange, and strawberry.
+Finally, I do a simple querry using the same logic as the addition part of the program to print out the list so far. in this case, it is pinapple, apple, lemon, orange, and strawberry.
 - However, I instead tell the program to look for a "/getlist" in the URL, and then query "finallist" for the list to print out.
 
 ![Image](pictures\labReport2\qurerryfinallists.JPG)
@@ -82,9 +82,13 @@ The code above creates a web-page that stores and prints out a list when command
 
 ### Reversed Method Debug
 
-1. **Failure-inducing input:**
+**Failure-inducing input:**
 
-When the length of the array is greater than 1.
+The failure-inducing input for this method (which is supposed to return a new array that is the reversed of in inputed array) is when the length of the array is greater than 1.
+
+It would work fine if the array contained one element or less, but dothing more.
+
+This is the test that I made which failed:
 
 ```
 @Test
@@ -95,16 +99,16 @@ When the length of the array is greater than 1.
 ```
 
 
-2. **Symptom:**
+**Symptom:**
 
-The second half of the array would be symmetrical to the first half, rather than being the reversed of the original array.
+The symptom was that it was returning the original version of the inputed array, rather than the reversed version.
 
 ![Image](pictures\labReport2\reverseSymptom15l.JPG)
 
 
-3. **Bug:**
+**Bug:**
 
-Changed the original array “arr” rather than the new array “newArray”
+The bug was that the original array "arr" and the new array that was supposed to be outputed "newArray" were switched in the code. To fix the bug, I just changed switched them to return the new reversed array.
 
 ```
 // Returns a *new* array with all the elements of the input array in reversed
@@ -118,13 +122,17 @@ Changed the original array “arr” rather than the new array “newArray”
   }
 ```
 
+**Connection**
+
+The reason that an array with 1 or 0 elements doesn't show any bad symptoms is because what we defined as the correct output is for the original array to be reversed in the new array. That being said, the reverse of an array with 1 element or 0 is itself. Even if we return the original array, we wouldn't see any bad symptoms. However, once we start adding more elements where the correct output isn't itself, returning the original array will cause problems.
+
 ---
 
 ### Filter Method Debug
 
-1. **Failure-inducing input:**
+**Failure-inducing input:**
 
-Whenever there is a solution with more than one element
+The failure-inducing input is whenever there is an input with more than one element
 
 ```
 @Test
@@ -153,16 +161,16 @@ Whenever there is a solution with more than one element
     }
 ```
 
-2. **Symptom:**
+**Symptom:**
 
-It filters the correct elements, but stores them in a reverse order.
+The symptom is that the method does filter through the correct elements, yet it returns them in a reverse order.
 
 ![Image](pictures\labReport2\filterSymptom15l.JPG)
 
 
-3. **Bug:**
+**Bug:**
 
-The code specifically inserted the filtered element at the 0’th index, so I took it out and let the program add the filtered element at the end of the list by default	
+The bug was that the code originally inserted the filtered elements in the beginning of the list. So I took that part out to make the program add the filtered elements at the end of the list by default	
 
 ```
 // Returns a new list that has all the elements of the input list for which
@@ -178,3 +186,7 @@ The code specifically inserted the filtered element at the 0’th index, so I to
     return result;
   }
 ```
+
+**Connection**
+
+The reason that an list with 1 or 0 elements doesn't show any bad symptoms is because when we filter out the element, it will either return no elements as it is filtered out, or return the same element. And since there isn't and order to those outputs, we wouldn't see any bad symptoms. But once we start adding more elements in the list, we notice how the bug outputs the correct output in reverse once there is an order.
