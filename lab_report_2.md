@@ -122,7 +122,7 @@ The bug was that the original array "arr" and the new array that was supposed to
   }
 ```
 
-**Connection**
+**Connection:**
 
 The reason that an array with 1 or 0 elements doesn't show any bad symptoms is because what we defined as the correct output is for the original array to be reversed in the new array. That being said, the reverse of an array with 1 element or 0 is itself. Even if we return the original array, we wouldn't see any bad symptoms. However, once we start adding more elements where the correct output isn't itself, returning the original array will cause problems.
 
@@ -187,6 +187,6 @@ The bug was that the code originally inserted the filtered elements in the begin
   }
 ```
 
-**Connection**
+**Connection:**
 
 The reason that an list with 1 or 0 elements doesn't show any bad symptoms is because when we filter out the element, it will either return no elements as it is filtered out, or return the same element. And since there isn't and order to those outputs, we wouldn't see any bad symptoms. But once we start adding more elements in the list, we notice how the bug outputs the correct output in reverse once there is an order.
