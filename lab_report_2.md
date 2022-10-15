@@ -80,7 +80,7 @@ Finally, I do a simple querry using the same logic as the addition part of the p
 
 ## Part 2
 
-### Reversed Method Debug
+### Array Method Debug: reversed
 
 **Failure-inducing input:**
 
@@ -128,7 +128,7 @@ The reason that an array with 1 or 0 elements doesn't show any bad symptoms is b
 
 ---
 
-### Filter Method Debug
+### List Method Debug: filter
 
 **Failure-inducing input:**
 
