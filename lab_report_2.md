@@ -61,20 +61,67 @@ This is the first page that opens before any queries are called in the URL:
 
 ![Image](pictures\labReport2\starttlist.JPG)
 
-These images showcase when I added items to the list.
-- The code above looks for specific path, in this case I set it to "/add". Once it finds that path using the getPath method, if follows through the if statment.
-- I then defined an empty string array named "parameters", while also using the getQuery method to set the split to "=". This is what splits one element from the next in the URL for the array. i define another if statment so that once I do a query with "?", it will look for the string "s". This will be parameters[0].
-- Once it finds "s", it will add parameters[1] to list. It finds parameters[1] after I do a spit in the URL with the "=".
-- These images showcase the addition query to the list for pinapple, apple, lemon, orange, and strawberry.
+---
+
+### These images showcase when I added items to the list.
+
+
+
+- This screenshot uses the handle request method to find "/add" in the URL.
+- I then did a query "?", then used the getQuery method that splits each element in the with "=".
+- The method then looks for "s" after the query, which will be the input for the first element, telling the program to input the second element (which is indicated after a "=") in the list.
+- I defined the first element to be "parameters[0]" in the code which equals to "s".
+- I defined the second element to be "parameters[1]" which equals to "pineapple" in this case.
+- These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
+- In this case, since the second element, or parameters[1], in the URL is "pineapple", that term is then inserted into the list.
 
 ![Image](pictures\labReport2\addeddpinaple.JPG)
+
+- This screenshot uses the handle request method to find "/add" in the URL.
+- I then did a query "?", then used the getQuery method that splits each element in the with "=".
+- The method then looks for "s" after the query, which will be the input for the first element, telling the program to input the second element (which is indicated after a "=") in the list.
+- I defined the first element to be "parameters[0]" in the code which equals to "s".
+- I defined the second element to be "parameters[1]" which equals to "apple" in this case.
+- These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
+- In this case, since the second element, or parameters[1], in the URL is "apple", that term is then inserted into the list.
+
 ![Image](pictures\labReport2\appleaddsfed.JPG)
+
+- This screenshot uses the handle request method to find "/add" in the URL.
+- I then did a query "?", then used the getQuery method that splits each element in the with "=".
+- The method then looks for "s" after the query, which will be the input for the first element, telling the program to input the second element (which is indicated after a "=") in the list.
+- I defined the first element to be "parameters[0]" in the code which equals to "s".
+- I defined the second element to be "parameters[1]" which equals to "lemon" in this case.
+- These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
+- In this case, since the second element, or parameters[1], in the URL is "lemon", that term is then inserted into the list.
+
 ![Image](pictures\labReport2\lemohjnadded.JPG)
+
+- This screenshot uses the handle request method to find "/add" in the URL.
+- I then did a query "?", then used the getQuery method that splits each element in the with "=".
+- The method then looks for "s" after the query, which will be the input for the first element, telling the program to input the second element (which is indicated after a "=") in the list.
+- I defined the first element to be "parameters[0]" in the code which equals to "s".
+- I defined the second element to be "parameters[1]" which equals to "orange" in this case.
+- These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
+- In this case, since the second element, or parameters[1], in the URL is "orange", that term is then inserted into the list.
+
 ![Image](pictures\labReport2\orangeasded.JPG)
+
+- This screenshot uses the handle request method to find "/add" in the URL.
+- I then did a query "?", then used the getQuery method that splits each element in the with "=".
+- The method then looks for "s" after the query, which will be the input for the first element, telling the program to input the second element (which is indicated after a "=") in the list.
+- I defined the first element to be "parameters[0]" in the code which equals to "s".
+- I defined the second element to be "parameters[1]" which equals to "strawberry" in this case.
+- These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
+- In this case, since the second element, or parameters[1], in the URL is "strawberry", that term is then inserted into the list.
+
 ![Image](pictures\labReport2\straawwberyueaded.JPG)
 
-Finally, I do a simple querry using the same logic as the addition part of the program to print out the list so far. in this case, it is pinapple, apple, lemon, orange, and strawberry.
-- However, I instead tell the program to look for a "/getlist" in the URL, and then query "finallist" for the list to print out.
+---
+
+- Finally, I do a simple query using the same method "handleRequest" as the part of adding an item to the list to then print out the entire list so far. In this screenshot, the list consists of: pinapple, apple, lemon, orange, and strawberry.
+- What the function does is it uses the getPath method and checks if "/getlist" is in the URL, and then after a query "?", it searches for the term "finallist" for parameters[0] which will then tell the program to print out the list, as showcased in the screenshot.
+- In this case, the program does not look for a second element after thge query for parameters[1]
 
 ![Image](pictures\labReport2\qurerryfinallists.JPG)
 
