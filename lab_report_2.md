@@ -65,7 +65,7 @@ This is the first page that opens before any queries are called in the URL:
 
 ### These images showcase when I added items to the list.
 
-
+![Image](pictures\labReport2\addeddpinaple.JPG)
 
 - This screenshot uses the handle request method to find "/add" in the URL.
 - I then did a query "?", then used the getQuery method that splits each element in the with "=".
@@ -75,7 +75,11 @@ This is the first page that opens before any queries are called in the URL:
 - These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
 - In this case, since the second element, or parameters[1], in the URL is "pineapple", that term is then inserted into the list.
 
-![Image](pictures\labReport2\addeddpinaple.JPG)
+
+
+
+
+![Image](pictures\labReport2\appleaddsfed.JPG)
 
 - This screenshot uses the handle request method to find "/add" in the URL.
 - I then did a query "?", then used the getQuery method that splits each element in the with "=".
@@ -85,7 +89,11 @@ This is the first page that opens before any queries are called in the URL:
 - These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
 - In this case, since the second element, or parameters[1], in the URL is "apple", that term is then inserted into the list.
 
-![Image](pictures\labReport2\appleaddsfed.JPG)
+
+
+
+
+![Image](pictures\labReport2\lemohjnadded.JPG)
 
 - This screenshot uses the handle request method to find "/add" in the URL.
 - I then did a query "?", then used the getQuery method that splits each element in the with "=".
@@ -95,7 +103,11 @@ This is the first page that opens before any queries are called in the URL:
 - These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
 - In this case, since the second element, or parameters[1], in the URL is "lemon", that term is then inserted into the list.
 
-![Image](pictures\labReport2\lemohjnadded.JPG)
+
+
+
+
+![Image](pictures\labReport2\orangeasded.JPG)
 
 - This screenshot uses the handle request method to find "/add" in the URL.
 - I then did a query "?", then used the getQuery method that splits each element in the with "=".
@@ -105,7 +117,11 @@ This is the first page that opens before any queries are called in the URL:
 - These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
 - In this case, since the second element, or parameters[1], in the URL is "orange", that term is then inserted into the list.
 
-![Image](pictures\labReport2\orangeasded.JPG)
+
+
+
+
+![Image](pictures\labReport2\straawwberyueaded.JPG)
 
 - This screenshot uses the handle request method to find "/add" in the URL.
 - I then did a query "?", then used the getQuery method that splits each element in the with "=".
@@ -115,7 +131,7 @@ This is the first page that opens before any queries are called in the URL:
 - These elements change everytime we input refresh a new page. It would check the URL to see if anything changed, and if parameters[0]" is still "s", it will input what ever is in parameters[1] into the list, if it changed.
 - In this case, since the second element, or parameters[1], in the URL is "strawberry", that term is then inserted into the list.
 
-![Image](pictures\labReport2\straawwberyueaded.JPG)
+
 
 ---
 
