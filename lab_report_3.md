@@ -8,7 +8,12 @@ $ find -empty
 ./.git/refs/tags
 ```
 
+- The `-empty ` in the command simply finds all the empty files in the working directory.
+- This could be useful if you have a new file made that you want to code in, or if there are any empty, old, trash files that you wnat to find to clear out.
+
+
 ---
+
 
 ```
 $ find -name "*.txt" > allTXTfiles.txt
@@ -30,6 +35,9 @@ In allTXTfiles.txt:
 ...
 ```
 
+- This command finds all the files with ".txt" in their name, as indicated from the `-name`, and stores them in a new file called allTXTfiles.txt.
+- This could be very useful if you were looking for any files of a certain type listed out, for example, .java files.
+
 ---
 
 
@@ -37,6 +45,9 @@ In allTXTfiles.txt:
 $ find . -name chapter-1.txt
 ./technical/911report/chapter-1.txt
 ```
+
+- This command finds the path from the `.` point, of the inputed name of a file.
+- This can also be useful for easily getting the path of any specific file, all you need is its name.
 
 
 ## grep
@@ -51,6 +62,8 @@ $ grep -i risk technical/biomed/1468-6708-3-1.txt
           effects of obesity on risk factors for future health. A
         no excess risk for older adults who would be classified as
 ```
+
+- This
 
 
 ---
