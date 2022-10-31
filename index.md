@@ -2,6 +2,12 @@ Hello World! My name is Hamza Dehaini :)
 
 **[Cover Page](https://hdehaini.github.io/cse15l-lab-reports/coverpage.html)**
 
-**[Lab Report 1 Week 0](https://hdehaini.github.io/cse15l-lab-reports/lab-report-1-week-0.html)**
+**[Lab Report 0](https://hdehaini.github.io/cse15l-lab-reports/lab_report_0.html)**
+
+**[Lab Report 1](https://hdehaini.github.io/cse15l-lab-reports/lab_report_1.html)**
+
+**[Lab Report 2](https://hdehaini.github.io/cse15l-lab-reports/lab_report_2.html)**
+
+**[Lab Report 3](https://hdehaini.github.io/cse15l-lab-reports/lab_report_3.html)**
 
 :)
