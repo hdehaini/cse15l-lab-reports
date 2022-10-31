@@ -148,7 +148,10 @@ $ less -N technical/911report/chapter-1.txt
      23
 ```
 
-- This is a 
+- This less command opens the first few lines of a specified file in the terminal, and you can increase the amount of lines shown using `space bar` or `enter`, and can clear all the text using `q`.
+- The `-N` simply numbers each line, as seen on the left of the text.
+- This command is extremly useful if you quickly wanted to look at a text file instead of finding and opening it, and easily clear it when your done.
+- The `-N`, also makes the file more organized by numbering each line, if that is what the user wants.
 
 ---
 
@@ -180,6 +183,9 @@ Boarding the Flights
     In another Logan terminal, Shehhi, joined by Fayez Banihammad, Mohand al Shehri, Ahmed al Ghamdi, and Hamza al Ghamdi, checked in for United Airlines Flight 175, also bound for Los Angeles. A couple of Shehhi's colleagues
 
 ```
+
+- This command permanently prints out the text file using the `-X` option.
+- This is useful to the user if the permanently want the text to stay in the terminal, so that they can refer back to it.
 
 ---
 
@@ -243,3 +249,7 @@ Boarding the Flights
                 public testimony from 160 witnesses.
 technical/911report/preface.txt (file 2 of 2)
 ```
+- This command simply shows how more than one file can print out.
+- It isn't very visable here, but it first prints out the first file, then prints out the second file on command of the user.
+- This is useful to the user if they wanted to preview multiple files without having to remember to check each one one-by-one.
+- The less command helps the user with organization and cleanliness.
