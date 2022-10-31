@@ -8,6 +8,7 @@ $ find -empty
 ./.git/refs/tags
 ```
 
+---
 
 ```
 $ find -name "*.txt" > allTXTfiles.txt
@@ -27,6 +28,14 @@ In allTXTfiles.txt:
 .
 ..
 ...
+```
+
+---
+
+
+```
+$ find . -name chapter-1.txt
+./technical/911report/chapter-1.txt
 ```
 
 
@@ -73,6 +82,10 @@ technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:present
 technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:organized alphabetically by topic. Topics will be specific
 technical/plos/pmed.0020028.txt:        incrementally to the alphabet soup of public health. But instead, we could choose to
 ```
+
+
+---
+
 
 ```
 $ grep -c cat technical/plos/pmed.0020246.txt
