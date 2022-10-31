@@ -1,5 +1,35 @@
 # Lab Report 3
 ## find
+
+
+```
+$ find -empty
+./.git/objects/info
+./.git/refs/tags
+```
+
+
+```
+$ find -name "*.txt" > allTXTfiles.txt
+
+In allTXTfiles.txt:
+./allTXTfiles.txt
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-2.txt
+.
+..
+...
+```
+
+
 ## grep
 
 ```
