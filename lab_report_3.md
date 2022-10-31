@@ -250,6 +250,6 @@ Boarding the Flights
 technical/911report/preface.txt (file 2 of 2)
 ```
 - This command simply shows how more than one file can print out.
-- It isn't very visable here, but it first prints out the first file, then prints out the second file on command of the user.
+- It isn't very visable here, but it first prints out the first file, then prints out the second file on command of the user using `:n` which outputs `:n...skipping...`.
 - This is useful to the user if they wanted to preview multiple files without having to remember to check each one one-by-one.
 - The less command helps the user with organization and cleanliness.
