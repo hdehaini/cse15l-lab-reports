@@ -63,7 +63,11 @@ $ grep -i risk technical/biomed/1468-6708-3-1.txt
         no excess risk for older adults who would be classified as
 ```
 
-- This
+- This grep command simply looks for all the times the inputed term "risk" shows up in the file of the inputed path.
+- The `-i` makes case of the input not matter.
+- This is useful for:
+    - Finding terms in a specific file.
+    - Using `-i` is helpful to find all terms with the letters of the input, without factoring in the case of the letters.
 
 
 ---
@@ -96,6 +100,9 @@ technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:organiz
 technical/plos/pmed.0020028.txt:        incrementally to the alphabet soup of public health. But instead, we could choose to
 ```
 
+- This command also looks for a specific term in the files, in this case "alphebet". However, the `-r` allows the command to recursivily look for the term. This means that you can look for the input through all files and sub files.
+- This is useful if you wanted to look for a term inentire folders. You wouldn't have to search each file for that term, rather using this command would save a lot of time.
+
 
 ---
 
@@ -104,6 +111,9 @@ technical/plos/pmed.0020028.txt:        incrementally to the alphabet soup of pu
 $ grep -c cat technical/plos/pmed.0020246.txt
 30
 ```
+
+- This command outputs the number of times the input appears in a file, using the `-c` option.
+- This is useful if you just wanted to know if a term appears in a file or files, and how many times, rather than where in-text specifically.
 
 
 ## less
