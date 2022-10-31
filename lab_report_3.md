@@ -3,7 +3,6 @@
 ## grep
 ## less
 
-## -N
 ```
 $ less -N technical/911report/chapter-1.txt
 
@@ -39,9 +38,36 @@ $ less -N technical/911report/chapter-1.txt
 ---
 
 ```
-$ less technical/911report/chapter-1
-chapter-1.txt     chapter-10.txt    chapter-11.txt    chapter-12.txt    chapter-13.1.txt  chapter-13.2.txt  chapter-13.3.txt  chapter-13.4.txt  chapter-13.5.txt
+$ less -X technical/911report/chapter-1.txt
+
+        
+
+"WE HAVE SOME PLANES"
+
+    Tuesday, September 11, 2001, dawned temperate and nearly cloudless in the eastern United States. Millions of men and women readied themselves for work. Some made their way to the Twin Towers, the signature structures of the World Trade Center complex in New York City. Others went to Arlington, Virginia, to the Pentagon. Across the Potomac River, the United States Congress was back in session. At the other end of Pennsylvania Avenue, people began to line up for a White House tour. In Sarasota, Florida, President George W. Bush went for an early morning run.
+
+    For those heading to an airport, weather conditions could not have been better for a safe and pleasant journey. Among the travelers were Mohamed Atta and Abdul Aziz al Omari, who arrived at the airport in Portland, Maine.
+
+INSIDE THE FOUR FLIGHTS
+
+Boarding the Flights
+
+    Boston: American 11 and United 175. Atta and Omari boarded a 6:00 A.M. flight from Portland to Boston's Logan International Airport.
+
+    When he checked in for his flight to Boston, Atta was selected by a computerized prescreening system known as CAPPS (Computer Assisted Passenger Prescreening System), created to identify passengers who should be subject to special security measures. Under security rules in place at the time, the only consequence of Atta's selection by CAPPS was that his checked bags were held off the plane until it was confirmed that he had boarded the aircraft. This did not hinder Atta's plans.
+
+    Atta and Omari arrived in Boston at 6:45. Seven minutes later, Atta apparently took a call from Marwan al Shehhi, a longtime colleague who was at another terminal at Logan Airport. They spoke for three minutes.
+
+    It would be their final conversation.
+
+    Between 6:45 and 7:40, Atta and Omari, along with Satam al Suqami, Wail al Shehri, and Waleed al Shehri, checked in and boarded American Airlines Flight 11, bound for Los Angeles. The flight was scheduled to depart at 7:45.
+
+    In another Logan terminal, Shehhi, joined by Fayez Banihammad, Mohand al Shehri, Ahmed al Ghamdi, and Hamza al Ghamdi, checked in for United Airlines Flight 175, also bound for Los Angeles. A couple of Shehhi's colleagues
+
 ```
+
+---
+
 
 ```
 $ less technical/911report/chapter-1.txt technical/911report/preface.txt
