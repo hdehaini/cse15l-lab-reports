@@ -134,4 +134,3 @@ $ grep -c funny technical/government/About_LSC/Progress_report.txt
 0
 ```
 - This is a demonstration if none of the words in the file are the input word, in this case "funny".
-- The output differs slightly by simple outputing 0 without the path next to it.
