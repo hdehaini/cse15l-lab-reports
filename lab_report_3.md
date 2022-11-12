@@ -7,10 +7,9 @@
 ## *-i*
 
 
-- The `-i` makes case of the input not matter.
-- This is useful for:
-    - Finding terms in a specific file.
-    - To find all terms with the letters of the input, without worryingabout the case of the letters.
+The `-i` makes case of the input not matter. This is useful for:
+- Finding terms in a specific file.
+- To find all terms with the letters of the input, without worryingabout the case of the letters.
 
 ```
 $ grep -i risk technical/biomed/1468-6708-3-1.txt
@@ -43,39 +42,69 @@ $ grep -i sUiTaBle technical/government/Env_Prot_Agen/atx1-6.txt
 
 
 ```
-$ grep -r -i ALPHABET
-technical/911report/chapter-13.4.txt:                problem, as KSM had to send emails in Arabic using the English alphabet. Ibid. In
-technical/911report/chapter-13.5.txt:                to be translated into the Roman alphabet, ensuring one common spelling for all
-technical/biomed/1471-2105-3-12.txt:          in the characterization of an "alphabet" of putatively
-technical/biomed/1471-2105-3-12.txt:            elucidation of an "alphabet" of essential genes
-technical/biomed/1471-2105-3-18.txt:            (e.g. the observable alphabet, a,c,g,u for RNA). I will
-technical/biomed/1471-2105-3-2.txt:            the output from these links are sorted alphabetically.
-technical/biomed/1471-2105-3-2.txt:            (black text). Diagrams are listed alphabetically by
-technical/biomed/1471-2105-3-2.txt:            entries are sorted alphabetically first by their
-technical/biomed/1471-2105-3-2.txt:            order. The alphabetical/numerical order for any
-technical/biomed/1471-2105-3-28.txt:          number of coordinates required to represent the alphabet
-technical/biomed/1471-2105-3-28.txt:          required. If, for example, an alphabet of 4 is required,
-technical/biomed/1471-2105-3-28.txt:          coordinates from 2 to 3. If, however, an alphabet of 20
-technical/biomed/1471-2105-3-6.txt:          are alphabetic characters) by a unique binary number -
-technical/biomed/1471-2164-4-6.txt:          ] we have chosen the alphabetically minimal name.
-technical/biomed/1471-2253-2-4.txt:        and alphabetically within a year.
-technical/biomed/1472-6882-1-10.txt:          alphabetical order.
-technical/biomed/1472-6882-3-3.txt:        Annotated Alphabetic list, 2002 [ 6 ] . While the National
-technical/biomed/1472-6882-3-3.txt:          Headings-Annotated Alphabetic List, 2001, which was the
-technical/biomed/gb-2003-4-1-r7.txt:          of representing each GO process as an alphabetical list
-technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:original statements (Volume I) and to standards alphabetized by
-technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:presents the standards alphabetized by topic, pulls together all
-technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:organized alphabetically by topic. Topics will be specific
-technical/plos/pmed.0020028.txt:        incrementally to the alphabet soup of public health. But instead, we could choose to
+$ grep -i ALPHABET technical/911report/chapter-13.4.txt > alphabetLines.txt
+
+In alphabetLines.txt:
+
+                problem, as KSM had to send emails in Arabic using the English alphabet. Ibid. In
+
 ```
 
-- With this command, we recusivly searched through all the files in /technical using the `r` command and searched for the term 'ALPHABET'.
-- Using the `-i` command makes the all uppercase input not matter, and search for all terms with the letters in the input.
+- With this command, search through a specific directory to look for the ALPHABET.
+- Notice how using the `-i` command makes the all uppercase input not matter, and search for all terms with the letters in the input.
 
 
 ---
 
-## *-H*
+## *-r*
+
+The `-r` is a very useful command that allows us to look through all files withen a given folder, rather than limiting us to only look through one file at a time.
+
+```
+$ grep -r fantastic
+technical/plos/journal.pbio.0020148.txt:        ‘That was a fantastic time’, says Derek Stemple, then a postdoc with Driever but now a
+technical/plos/journal.pbio.0020306.txt:        information that leads to spinoffs for nanotechnology, that will be fantastic’, she
+```
+
+
+- This command returns all the file diretories in our working directory that contains the word fantastic
+
+
+```
+$ grep -r rabbit technical/plos/
+technical/plos/journal.pbio.0020348.txt:        Antoine Ranvier had already observed that some muscles of the rabbit were redder in color,
+technical/plos/pmed.0020018.txt:          secondary anti-rabbit or anti-mouse antibodies. For the detection of transfected ROCK1
+technical/plos/pmed.0020045.txt:          States), rabbit polyclonal anti-CD36 (Santa Cruz Biotechnology), rabbit polyclonal
+technical/plos/pmed.0020045.txt:          States), rabbit polyclonal phospho38/MAPK and mouse monoclonal p38 (Cell Signaling
+technical/plos/pmed.0020045.txt:          Technology, Beverly, Massachusetts, United States), rabbit polyclonal p-src (Y418)
+technical/plos/pmed.0020045.txt:          revealed with horse radish peroxidase (HRP)-conjugated anti-mouse IgM, or anti-rabbit IgG
+technical/plos/pmed.0020061.txt:        thalidomide induced gross defects in rabbits but not in rats, these guidelines called for
+technical/plos/pmed.0020061.txt:        rabbits, but not rats; functional effects have only recently been described [81].
+technical/plos/pmed.0020103.txt:          Missouri, United States), mouse anti-β-tubulin III, 1:500 (Sigma); rabbit anti-C-peptide,
+technical/plos/pmed.0020103.txt:          (Novocastra, Newcastle, United Kingdom); rabbit anti–cleaved caspase-3, 1:200 (Cell
+technical/plos/pmed.0020103.txt:          Signaling, Beverly, Massachusetts, United States); rabbit anti-glucagon, 1:200 (Dako,
+technical/plos/pmed.0020103.txt:          Carpinteria, California, United States); rabbit anti-Glut-2, 1:200 (ADI, San Antonio,
+technical/plos/pmed.0020103.txt:          (Sigma); and rabbit anti-Olig2, 1:1,000 (H. Takebayashi, National Institute for
+```
+
+- This command uses the `-r` extension to recusively look through the folder that was inputed for the word "rabbit"
+
+
+```
+$ grep -r temporarily technical/911report/  technical/plos/ > temporarilyRecurences.txt
+
+
+In temporarilyRecurences.txt:
+
+technical/911report/chapter-11.txt:                was no conscious decision to stop the operation after the trail was temporarily lost
+technical/911report/chapter-13.4.txt:                operation to stop temporarily. Intelligence report, interrogation of Nashiri, Feb.
+technical/911report/chapter-6.txt:            Though Nawaf 's trail was temporarily lost, the CIA soon identified"Khalid" as Khalid
+technical/911report/chapter-7.txt:                in Karachi and stayed there temporarily before being deployed to the United States
+```
+
+- This command shows how you can recurently look through two different folders.
+- It then funnels the results in a file called "temporarilyRecurences.txt"
+
 
 ---
 
