@@ -58,7 +58,7 @@ In alphabetLines.txt:
 
 ## *-r*
 
-The `-r` is a very useful command that allows us to look through all files withen a given folder, rather than limiting us to only look through one file at a time.
+The `-r` is a very useful command that allows us to look through all files withen a given folder. This command extension could be very handy giving us the option to look through all files in a folder rather tahn limiting us to only look through one file at a time.
 
 ```
 $ grep -r fantastic
@@ -110,10 +110,30 @@ technical/911report/chapter-7.txt:                in Karachi and stayed there te
 
 ## *-c*
 
+`-c` is a command extension that returns the number of times the input appears in a directory. This is useful to find out how many of a certain term comes up in different files. For example, if it was statistical data, you can find out the number of times a type of data was shown if you don't care about where specifically.
+
 ```
 $ grep -c cat technical/plos/pmed.0020246.txt
 30
 ```
 
-- This command outputs the number of times the input appears in a file, using the `-c` option.
-- This is useful if you just wanted to know if a term appears in a file or files, and how many times, rather than where in-text specifically.
+- This command outputs the number of times cat appears in a file, using the `-c` option.
+
+
+```
+$ grep -c cat technical/911report/chapter-1.txt technical/911report/chapter-2.txt technical/911report/chapter-3.txt
+technical/911report/chapter-1.txt:62
+technical/911report/chapter-2.txt:23
+technical/911report/chapter-3.txt:82
+```
+
+- This command uses `-c` to count how many times the term "cat" appeared in three differnt files, and outputs how many appeared next to each path of the files.
+
+
+
+```
+$ grep -c funny technical/government/About_LSC/Progress_report.txt 
+0
+```
+- This is a demonstration if none of the words in the file are the input word, in this case "funny".
+- The output differs slightly by simple outputing 0 without the path next to it.
