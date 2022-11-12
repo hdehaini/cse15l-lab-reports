@@ -7,9 +7,7 @@
 ## *-i*
 
 
-The `-i` makes case of the input not matter. This is useful for:
-- Finding terms in a specific file.
-- To find all terms with the letters of the input, without worryingabout the case of the letters.
+The `-i` makes case of the input not matter. This is useful for finding terms in a specific file without worrying about the case of the letters.
 
 ```
 $ grep -i risk technical/biomed/1468-6708-3-1.txt
