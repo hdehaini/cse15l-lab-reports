@@ -2,6 +2,13 @@
 
 ## grep
 
+---
+
+## *-i*
+
+
+The `-i` makes case of the input not matter. This is useful for finding terms in a specific file without worrying about the case of the letters.
+
 ```
 $ grep -i risk technical/biomed/1468-6708-3-1.txt
         excess risk for persons with very low BMI, but that persons
@@ -14,192 +21,116 @@ $ grep -i risk technical/biomed/1468-6708-3-1.txt
 ```
 
 - This grep command simply looks for all the times the inputed term "risk" shows up in the file of the inputed path.
-- The `-i` makes case of the input not matter.
-- This is useful for:
-    - Finding terms in a specific file.
-    - Using `-i` is helpful to find all terms with the letters of the input, without factoring in the case of the letters.
+
+
+```
+$ grep -i sUiTaBle technical/government/Env_Prot_Agen/atx1-6.txt
+        toxicity tests. They are also suitable for determining the toxicity
+        adequate, qualified technical staff and suitable space and
+        Suitable trout chow, Artemia, and other foods must be obtained as
+        potassium dichromate (K2Cr2O7), are suitable for use in the NPDES
+        disposable plastic test chambers are suitable. Test chamber volumes
+        checked against known suitable reference cysts by performing a
+        Additional species may be suitable for toxicity tests in
+        water or a freshwater such as well water or a suitable surface
+```
+
+- Even if the caseing for the input word was messed up as shown, using the `-i` in our grep command still works to find the inputed words in any case
+
+
+
+```
+$ grep -i ALPHABET technical/911report/chapter-13.4.txt > alphabetLines.txt
+
+In alphabetLines.txt:
+
+                problem, as KSM had to send emails in Arabic using the English alphabet. Ibid. In
+
+```
+
+- With this command, search through a specific directory to look for the ALPHABET.
+- Notice how using the `-i` command makes the all uppercase input not matter, and search for all terms with the letters in the input.
 
 
 ---
 
+## *-r*
+
+The `-r` is a very useful command that allows us to look through all files withen a given folder. This command extension could be very handy giving us the option to look through all files in a folder rather tahn limiting us to only look through one file at a time.
 
 ```
-$ grep -r -i alphabet
-technical/911report/chapter-13.4.txt:                problem, as KSM had to send emails in Arabic using the English alphabet. Ibid. In
-technical/911report/chapter-13.5.txt:                to be translated into the Roman alphabet, ensuring one common spelling for all
-technical/biomed/1471-2105-3-12.txt:          in the characterization of an "alphabet" of putatively
-technical/biomed/1471-2105-3-12.txt:            elucidation of an "alphabet" of essential genes
-technical/biomed/1471-2105-3-18.txt:            (e.g. the observable alphabet, a,c,g,u for RNA). I will
-technical/biomed/1471-2105-3-2.txt:            the output from these links are sorted alphabetically.
-technical/biomed/1471-2105-3-2.txt:            (black text). Diagrams are listed alphabetically by
-technical/biomed/1471-2105-3-2.txt:            entries are sorted alphabetically first by their
-technical/biomed/1471-2105-3-2.txt:            order. The alphabetical/numerical order for any
-technical/biomed/1471-2105-3-28.txt:          number of coordinates required to represent the alphabet
-technical/biomed/1471-2105-3-28.txt:          required. If, for example, an alphabet of 4 is required,
-technical/biomed/1471-2105-3-28.txt:          coordinates from 2 to 3. If, however, an alphabet of 20
-technical/biomed/1471-2105-3-6.txt:          are alphabetic characters) by a unique binary number -
-technical/biomed/1471-2164-4-6.txt:          ] we have chosen the alphabetically minimal name.
-technical/biomed/1471-2253-2-4.txt:        and alphabetically within a year.
-technical/biomed/1472-6882-1-10.txt:          alphabetical order.
-technical/biomed/1472-6882-3-3.txt:        Annotated Alphabetic list, 2002 [ 6 ] . While the National
-technical/biomed/1472-6882-3-3.txt:          Headings-Annotated Alphabetic List, 2001, which was the
-technical/biomed/gb-2003-4-1-r7.txt:          of representing each GO process as an alphabetical list
-technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:original statements (Volume I) and to standards alphabetized by
-technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:presents the standards alphabetized by topic, pulls together all
-technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:organized alphabetically by topic. Topics will be specific
-technical/plos/pmed.0020028.txt:        incrementally to the alphabet soup of public health. But instead, we could choose to
+$ grep -r fantastic
+technical/plos/journal.pbio.0020148.txt:        ‘That was a fantastic time’, says Derek Stemple, then a postdoc with Driever but now a
+technical/plos/journal.pbio.0020306.txt:        information that leads to spinoffs for nanotechnology, that will be fantastic’, she
 ```
 
-- This command also looks for a specific term in the files, in this case "alphebet". However, the `-r` allows the command to recursivily look for the term. This means that you can look for the input through all files and sub files.
-- This is useful if you wanted to look for a term inentire folders. You wouldn't have to search each file for that term, rather using this command would save a lot of time.
+
+- This command returns all the file diretories in our working directory that contains the word fantastic
+
+
+```
+$ grep -r rabbit technical/plos/
+technical/plos/journal.pbio.0020348.txt:        Antoine Ranvier had already observed that some muscles of the rabbit were redder in color,
+technical/plos/pmed.0020018.txt:          secondary anti-rabbit or anti-mouse antibodies. For the detection of transfected ROCK1
+technical/plos/pmed.0020045.txt:          States), rabbit polyclonal anti-CD36 (Santa Cruz Biotechnology), rabbit polyclonal
+technical/plos/pmed.0020045.txt:          States), rabbit polyclonal phospho38/MAPK and mouse monoclonal p38 (Cell Signaling
+technical/plos/pmed.0020045.txt:          Technology, Beverly, Massachusetts, United States), rabbit polyclonal p-src (Y418)
+technical/plos/pmed.0020045.txt:          revealed with horse radish peroxidase (HRP)-conjugated anti-mouse IgM, or anti-rabbit IgG
+technical/plos/pmed.0020061.txt:        thalidomide induced gross defects in rabbits but not in rats, these guidelines called for
+technical/plos/pmed.0020061.txt:        rabbits, but not rats; functional effects have only recently been described [81].
+technical/plos/pmed.0020103.txt:          Missouri, United States), mouse anti-β-tubulin III, 1:500 (Sigma); rabbit anti-C-peptide,
+technical/plos/pmed.0020103.txt:          (Novocastra, Newcastle, United Kingdom); rabbit anti–cleaved caspase-3, 1:200 (Cell
+technical/plos/pmed.0020103.txt:          Signaling, Beverly, Massachusetts, United States); rabbit anti-glucagon, 1:200 (Dako,
+technical/plos/pmed.0020103.txt:          Carpinteria, California, United States); rabbit anti-Glut-2, 1:200 (ADI, San Antonio,
+technical/plos/pmed.0020103.txt:          (Sigma); and rabbit anti-Olig2, 1:1,000 (H. Takebayashi, National Institute for
+```
+
+- This command uses the `-r` extension to recusively look through the folder that was inputed for the word "rabbit"
+
+
+```
+$ grep -r temporarily technical/911report/  technical/plos/ > temporarilyRecurences.txt
+
+
+In temporarilyRecurences.txt:
+
+technical/911report/chapter-11.txt:                was no conscious decision to stop the operation after the trail was temporarily lost
+technical/911report/chapter-13.4.txt:                operation to stop temporarily. Intelligence report, interrogation of Nashiri, Feb.
+technical/911report/chapter-6.txt:            Though Nawaf 's trail was temporarily lost, the CIA soon identified"Khalid" as Khalid
+technical/911report/chapter-7.txt:                in Karachi and stayed there temporarily before being deployed to the United States
+```
+
+- This command shows how you can recurently look through two different folders.
+- It then funnels the results in a file called "temporarilyRecurences.txt"
 
 
 ---
 
+## *-c*
+
+`-c` is a command extension that returns the number of times the input appears in a directory. This is useful to find out how many of a certain term comes up in different files. For example, if it was statistical data, you can find out the number of times a type of data was shown if you don't care about where specifically.
 
 ```
 $ grep -c cat technical/plos/pmed.0020246.txt
 30
 ```
 
-- This command outputs the number of times the input appears in a file, using the `-c` option.
-- This is useful if you just wanted to know if a term appears in a file or files, and how many times, rather than where in-text specifically.
-
-
-## less
-
-```
-$ less -N technical/911report/chapter-1.txt
-
-
-
-      1 
-      2
-      3
-      4 "WE HAVE SOME PLANES"
-      5 
-      6     Tuesday, September 11, 2001, dawned temperate and nearly cloudless in the eastern United States. Millions of men and women readied themselves for work. Some made their way to the Twin Towers, the signature structu      6 res of the World Trade Center complex in New York City. Others went to Arlington, Virginia, to the Pentagon. Across the Potomac River, the United States Congress was back in session. At the other end of Pennsylvania A      6 venue, people began to line up for a White House tour. In Sarasota, Florida, President George W. Bush went for an early morning run.
-      7 
-      8     For those heading to an airport, weather conditions could not have been better for a safe and pleasant journey. Among the travelers were Mohamed Atta and Abdul Aziz al Omari, who arrived at the airport in Portland      8 , Maine.
-      9 
-     10 INSIDE THE FOUR FLIGHTS
-     11
-     12 Boarding the Flights
-     13
-     14     Boston: American 11 and United 175. Atta and Omari boarded a 6:00 A.M. flight from Portland to Boston's Logan International Airport.
-     15
-     16     When he checked in for his flight to Boston, Atta was selected by a computerized prescreening system known as CAPPS (Computer Assisted Passenger Prescreening System), created to identify passengers who should be s     16 ubject to special security measures. Under security rules in place at the time, the only consequence of Atta's selection by CAPPS was that his checked bags were held off the plane until it was confirmed that he had bo     16 arded the aircraft. This did not hinder Atta's plans.
-     17
-     18     Atta and Omari arrived in Boston at 6:45. Seven minutes later, Atta apparently took a call from Marwan al Shehhi, a longtime colleague who was at another terminal at Logan Airport. They spoke for three minutes.   
-     19
-     20     It would be their final conversation.
-     21
-     22     Between 6:45 and 7:40, Atta and Omari, along with Satam al Suqami, Wail al Shehri, and Waleed al Shehri, checked in and boarded American Airlines Flight 11, bound for Los Angeles. The flight was scheduled to depar     22 t at 7:45.
-     23
-```
-
-- This less command opens the first few lines of a specified file in the terminal, and you can increase the amount of lines shown using `space bar` or `enter`, and can clear all the text using `q`.
-- The `-N` simply numbers each line, as seen on the left of the text.
-- This command is extremly useful if you quickly wanted to look at a text file instead of finding and opening it, and easily clear it when your done.
-- The `-N`, also makes the file more organized by numbering each line, if that is what the user wants.
-
----
-
-```
-$ less -X technical/911report/chapter-1.txt
-
-        
-
-"WE HAVE SOME PLANES"
-
-    Tuesday, September 11, 2001, dawned temperate and nearly cloudless in the eastern United States. Millions of men and women readied themselves for work. Some made their way to the Twin Towers, the signature structures of the World Trade Center complex in New York City. Others went to Arlington, Virginia, to the Pentagon. Across the Potomac River, the United States Congress was back in session. At the other end of Pennsylvania Avenue, people began to line up for a White House tour. In Sarasota, Florida, President George W. Bush went for an early morning run.
-
-    For those heading to an airport, weather conditions could not have been better for a safe and pleasant journey. Among the travelers were Mohamed Atta and Abdul Aziz al Omari, who arrived at the airport in Portland, Maine.
-
-INSIDE THE FOUR FLIGHTS
-
-Boarding the Flights
-
-    Boston: American 11 and United 175. Atta and Omari boarded a 6:00 A.M. flight from Portland to Boston's Logan International Airport.
-
-    When he checked in for his flight to Boston, Atta was selected by a computerized prescreening system known as CAPPS (Computer Assisted Passenger Prescreening System), created to identify passengers who should be subject to special security measures. Under security rules in place at the time, the only consequence of Atta's selection by CAPPS was that his checked bags were held off the plane until it was confirmed that he had boarded the aircraft. This did not hinder Atta's plans.
-
-    Atta and Omari arrived in Boston at 6:45. Seven minutes later, Atta apparently took a call from Marwan al Shehhi, a longtime colleague who was at another terminal at Logan Airport. They spoke for three minutes.
-
-    It would be their final conversation.
-
-    Between 6:45 and 7:40, Atta and Omari, along with Satam al Suqami, Wail al Shehri, and Waleed al Shehri, checked in and boarded American Airlines Flight 11, bound for Los Angeles. The flight was scheduled to depart at 7:45.
-
-    In another Logan terminal, Shehhi, joined by Fayez Banihammad, Mohand al Shehri, Ahmed al Ghamdi, and Hamza al Ghamdi, checked in for United Airlines Flight 175, also bound for Los Angeles. A couple of Shehhi's colleagues
-
-```
-
-- This command permanently prints out the text file using the `-X` option.
-- This is useful to the user if the permanently want the text to stay in the terminal, so that they can refer back to it.
-
----
+- This command outputs the number of times cat appears in a file, using the `-c` option.
 
 
 ```
-$ less technical/911report/chapter-1.txt technical/911report/preface.txt
-
-
-
-
-
-"WE HAVE SOME PLANES"
-
-    Tuesday, September 11, 2001, dawned temperate and nearly cloudless in the eastern United States. Millions of men and women readied themselves for work. Some made their way to the Twin Towers, the signature structures of the World Trade Center complex in New York City. Others went to Arlington, Virginia, to the Pentagon. Across the Potomac River, the United States Congress was back in session. At the other end of Pennsylvania Avenue, people began to line up for a White House tour. In Sarasota, Florida, President George W. Bush went for an early morning run.
-
-    For those heading to an airport, weather conditions could not have been better for a safe and pleasant journey. Among the travelers were Mohamed Atta and Abdul Aziz al Omari, who arrived at the airport in Portland, Maine.
-
-INSIDE THE FOUR FLIGHTS
-
-Boarding the Flights
-
-    Boston: American 11 and United 175. Atta and Omari boarded a 6:00 A.M. flight from Portland to Boston's Logan International Airport.
-
-    When he checked in for his flight to Boston, Atta was selected by a computerized prescreening system known as CAPPS (Computer Assisted Passenger Prescreening System), created to identify passengers who should be subject to special security measures. Under security rules in place at the time, the only consequence of Atta's selection by CAPPS was that his checked bags were held off the plane until it was confirmed that he had boarded the aircraft. This did not hinder Atta's plans.
-
-    Atta and Omari arrived in Boston at 6:45. Seven minutes later, Atta apparently took a call from Marwan al Shehhi, a longtime colleague who was at another terminal at Logan Airport. They spoke for three minutes.
-
-    It would be their final conversation.
-
-    Between 6:45 and 7:40, Atta and Omari, along with Satam al Suqami, Wail al Shehri, and Waleed al Shehri, checked in and boarded American Airlines Flight 11, bound for Los Angeles. The flight was scheduled to depart at 7:45.
-
-    In another Logan terminal, Shehhi, joined by Fayez Banihammad, Mohand al Shehri, Ahmed al Ghamdi, and Hamza al Ghamdi, checked in for United Airlines Flight 175, also bound for Los Angeles. A couple of Shehhi's colleagues :n...skipping...
-
-
-
-            PREFACE
-            We present the narrative of this report and the recommendations that flow from it to
-                the President of the United States, the United States Congress, and the American
-                people for their consideration. Ten Commissioners-five Republicans and five
-                Democrats chosen by elected leaders from our nation's capital at a time of great
-                partisan division-have come together to present this report without dissent.
-            We have come together with a unity of purpose because our nation demands it.
-                September 11, 2001, was a day of unprecedented shock and suffering in the history of
-                the United States. The nation was unprepared. How did this happen, and how can we
-                avoid such tragedy again?
-            To answer these questions, the Congress and the President created the National
-                Commission on Terrorist Attacks Upon the United States (Public Law 107-306, November
-                27, 2002).
-            Our mandate was sweeping. The law directed us to investigate "facts and circumstances
-                relating to the terrorist attacks of September 11, 2001," including those relating
-                to intelligence agencies, law enforcement agencies, diplomacy, immigration issues
-                and border control, the flow of assets to terrorist organizations, commercial
-                aviation, the role of congressional oversight and resource allocation, and other
-                areas determined relevant by the Commission. In pursuing our mandate, we have
-                reviewed more than 2.5 million pages of documents and interviewed more than 1,200
-                individuals in ten countries. This included nearly every senior official from the
-                current and previous administrations who had responsibility for topics covered in
-                our mandate. We have sought to be independent, impartial, thorough, and nonpartisan.
-                From the outset, we have been committed to share as much of our investigation as we
-                can with the American people. To that end, we held 19 days of hearings and took
-                public testimony from 160 witnesses.
-technical/911report/preface.txt (file 2 of 2)
+$ grep -c cat technical/911report/chapter-1.txt technical/911report/chapter-2.txt technical/911report/chapter-3.txt
+technical/911report/chapter-1.txt:62
+technical/911report/chapter-2.txt:23
+technical/911report/chapter-3.txt:82
 ```
-- This command simply shows how more than one file can print out.
-- It isn't very visable here, but it first prints out the first file, then prints out the second file on command of the user using `:n` which outputs `:n...skipping...`.
-- This is useful to the user if they wanted to preview multiple files without having to remember to check each one one-by-one.
-- The less command helps the user with organization and cleanliness.
+
+- This command uses `-c` to count how many times the term "cat" appeared in three differnt files, and outputs how many appeared next to each path of the files.
+
+
+
+```
+$ grep -c funny technical/government/About_LSC/Progress_report.txt 
+0
+```
+- This is a demonstration if none of the words in the file are the input word, in this case "funny".
