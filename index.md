@@ -10,4 +10,6 @@ Hello World! My name is Hamza Dehaini :)
 
 **[Lab Report 3](https://hdehaini.github.io/cse15l-lab-reports/lab_report_3.html)**
 
+**[Lab Report 4](https://hdehaini.github.io/cse15l-lab-reports/lab_report_4.html)**
+
 :)
