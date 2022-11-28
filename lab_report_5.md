@@ -26,8 +26,6 @@ fi
 
 javac -cp ".;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar" *.java
 java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore ListExamples
-
-echo $?
 ```
 ## Lab 3:
 
@@ -59,32 +57,29 @@ echo $?
     - Since the command succeded, the return code would be 0
     
 4. For the line with the first if statment with `[[ -f ListExamples.java ]]` as a condition:
-    - There is no standard output as it just removes the folder named student-submission and its contents
-    - There is no standard error as there is always a file named student-submission to remove
+    - There is no standard output as it just checks to see if a file exits with '-f'
+    - There is no standard error as it will always find a file in student-submission
     - Since the command succeded, the return code would be 0
     
 5. For the line with the first if statment with `[[ -e ListExamples.java ]]` as a condition:
-    - There is no standard output as it just removes the folder named student-submission and its contents
-    - There is no standard error as there is always a file named student-submission to remove
+    - There is no standard output as it just checks to see if it finds a file with '-e'
+    - There is no standard error as it will always find a file in student-submission
     - Since the command succeded, the return code would be 0
     
 6. For the line with the command `javac -cp ".;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar" *.java`:
-    - There is no standard output as it just removes the folder named student-submission and its contents
-    - There is no standard error as there is always a file named student-submission to remove
+    - There is no standard output as this commands makes the java classes in the folder student-submission
+    - There is no standard error as the java program always makes a class file
     - Since the command succeded, the return code would be 0
     
 7. For the line with the command `java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore ListExamples`:
-    - There is no standard output as it just removes the folder named student-submission and its contents
-    - There is no standard error as there is always a file named student-submission to remove
-    - Since the command succeded, the return code would be 0
+    - There is no standard output as the command detecs an error, so it couldn't go through with the command
+    - The standard error is:
+    ```
+    ListExamples.java:15: error: ';' expected
+        result.add(0, s)
+                        ^
+    1 error
+    ```
+    This is the case since the student forgot to add a semicolon, ending the command short to give a standard syntax error
+    - Since the command failed and returned an error, the return code would be non-zero number. After some research, I think it would end up giving a error code of 1.
     
-8. For the line with the command `echo $?`:
-    - There is no standard output as it just removes the folder named student-submission and its contents
-    - There is no standard error as there is always a file named student-submission to remove
-    - Since the command succeded, the return code would be 0
-    
-
-| Line # | Standard Output | Standard Error | Return Code |
-| ----------- | ----------- | ----------- | ----------- |
-| Header | Title | Title | Title |
-| Paragraph | Text | Text | Text |
