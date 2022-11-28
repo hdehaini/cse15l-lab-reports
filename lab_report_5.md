@@ -10,17 +10,15 @@ rm -rf student-submission
 git clone $1 student-submission
 cd student-submission
 
-if [[ -f ListExamples.java ]]
+if [[ ! -f ListExamples.java ]]
 then
-    echo "Found file with -f!"
-else
+    echo "File does not exist"
     exit N
 fi
 
 if [[ -e ListExamples.java ]]
 then
-    echo "Found file with -e!"
-else
+    echo "File does not exist"
     exit N
 fi
 
@@ -41,6 +39,10 @@ java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runn
 
 ![Image](pictures\labReport5\listmeathodcompileerror.PNG)
 
+## stdout, stderr, and Error Code
+
+---
+
 1. For the line with the command `rm -rf student-submission`:
     - There is no standard output as it just removes the folder named student-submission and its contents.
     - There is no standard error as there is always a file named student-submission to remove.
@@ -56,13 +58,13 @@ java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runn
     - There is no standard error as there is always a file named student-submission to change into
     - Since the command succeded, the return code would be 0
     
-4. For the line with the first if statment with `[[ -f ListExamples.java ]]` as a condition:
-    - There is no standard output as it just checks to see if a file exits with '-f'
+4. For the line with the first if statment with `[[ ! -f ListExamples.java ]]` as a condition:
+    - There is no standard output as it just checks to see if a file doesn't exits with '-f'
     - There is no standard error as it will always find a file in student-submission
     - Since the command succeded, the return code would be 0
     
-5. For the line with the first if statment with `[[ -e ListExamples.java ]]` as a condition:
-    - There is no standard output as it just checks to see if it finds a file with '-e'
+5. For the line with the first if statment with `[[ ! -e ListExamples.java ]]` as a condition:
+    - There is no standard output as it just checks to see if it doesn't finds a file with '-e'
     - There is no standard error as it will always find a file in student-submission
     - Since the command succeded, the return code would be 0
     
@@ -82,4 +84,16 @@ java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runn
     ```
     This is the case since the student forgot to add a semicolon, ending the command short to give a standard syntax error
     - Since the command failed and returned an error, the return code would be non-zero number. After some research, I think it would end up giving a error code of 1.
-    
+
+
+## if Statments
+
+---
+
+- There are two if statments in this bash script. One with the condition containing `-f` and one with `-e`. Both of these if statments are return false, since there will always be a file after the clone.
+- Since these if statments always return false, it will skip over the lines with the commands:
+```
+    echo "File does not exist"
+    exit N
+```
+- These commands do not run because they are in an if statment that returned false
