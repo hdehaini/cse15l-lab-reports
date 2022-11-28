@@ -43,7 +43,7 @@ echo $?
 
 ![Image](pictures\labReport5\listmeathodcompileerror.PNG)
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Line # | Standard Output | Standard Error | Return Code |
+| ----------- | ----------- | ----------- | ----------- |
+| Header | Title | Title | Title |
+| Paragraph | Text | Text | Text |
