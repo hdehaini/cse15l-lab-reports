@@ -42,3 +42,8 @@ echo $?
 ## Compile Error:
 
 ![Image](pictures\labReport5\listmeathodcompileerror.PNG)
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
