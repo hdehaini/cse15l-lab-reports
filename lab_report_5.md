@@ -39,9 +39,9 @@ java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runn
 
 ![Image](pictures\labReport5\listmeathodcompileerror.PNG)
 
-## stdout, stderr, and Error Code
-
 ---
+
+## stdout, stderr, and Error Code
 
 1. For the line with the command `rm -rf student-submission`:
     - There is no standard output as it just removes the folder named student-submission and its contents.
@@ -86,9 +86,9 @@ java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runn
     - Since the command failed and returned an error, the return code would be non-zero number. After some research, I think it would end up giving a error code of 1.
 
 
-## if Statments
-
 ---
+
+## if Statments
 
 - There are two if statments in this bash script. One with the condition containing `-f` and one with `-e`. Both of these if statments are return false, since there will always be a file after the clone.
 - Since these if statments always return false, it will skip over the lines with the commands:
