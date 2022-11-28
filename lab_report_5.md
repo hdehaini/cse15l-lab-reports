@@ -25,17 +25,17 @@ fi
 javac -cp ".;../lib/hamcrest-core-1.3.jar;../lib/junit-4.13.2.jar" *.java
 java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore ListExamples
 ```
-## Lab 3:
+## [Lab 3](https://github.com/ucsd-cse15l-f22/list-methods-lab3):
 
 ![Image](pictures\labReport5\listmeathodslab3.PNG)
 
 
-## Corrected:
+## [Corrected](https://github.com/ucsd-cse15l-f22/list-methods-corrected):
 
 ![Image](pictures\labReport5\lsitmeathodscorrected.PNG)
 
 
-## Compile Error:
+## [Compile Error](https://github.com/ucsd-cse15l-f22/list-methods-compile-error):
 
 ![Image](pictures\labReport5\listmeathodcompileerror.PNG)
 
